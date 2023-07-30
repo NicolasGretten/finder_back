@@ -1,0 +1,38 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "compile": "tsc",
+    "start": "nodemon ./gateway/index.ts",
+    "start-gateway": "nodemon gateway/index.js",
+    "start-service-a": "nodemon services/products/index.js",
+    "start-service-V": "nodemon services/inventory/index.js",
+    "start-services": "concurrently \"npm:start-service-*\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/gateway": "latest",
+    "@apollo/server": "^4.8.1",
+    "@apollo/subgraph": "^2.5.1",
+    "@prisma/client": "^5.0.0",
+    "apollo-server": "latest",
+    "dotenv": "^16.3.1",
+    "graphql": "latest",
+    "graphql-scalars": "^1.22.2",
+    "walk-sync": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.4",
+    "concurrently": "latest",
+    "lerna": "latest",
+    "nodemon": "^3.0.1",
+    "prisma": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
